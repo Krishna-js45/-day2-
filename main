@@ -1,0 +1,12 @@
+function listUsers() {
+  console.log("All Registered Users:");
+  users.forEach((u, i) => console.log(`${i + 1}. ${u.username}`));
+}
+registerUser("raj", "1234");
+registerUser("admin", "adminpass");
+registerUser("raj", "pass");
+loginUser("raj", "1234");
+loginUser("admin", "wrong");
+changePassword("raj", "1234", "abcd");
+loginUser("raj", "abcd");
+listUsers();
